@@ -44,7 +44,7 @@ Once downloaded, place the dataset in the data/ folder.
 To install the required Python packages, preferrably in a virtual environment, run:
 
 ```bash
-pip install -r requirements.python
+pip install -r requirements.txt
 ```
 
 ## Step 4: Pre-process Review Data
