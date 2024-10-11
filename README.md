@@ -2,6 +2,8 @@
 # Overview
 This is a simple project that utilizes the open-source Ollama LLM model to demonstrate its ability to help Android developers and publishers generate appropriate responses to user reviews and ratings. By integrating Ollama with a local setup, the project allows you to efficiently analyze and respond to user feedback for your Android app.
 
+Visit my Android DEV site and my apps [here](https://play.google.com/store/apps/dev?id=5073619381401000760).
+
 # Clone project
 
 To get started, clone this repository to your local machine:
