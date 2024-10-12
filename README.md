@@ -38,7 +38,7 @@ You can download the review dataset from your Google Play Console. Navigate to y
 
 ![Review Report](/doc/doc_img_1.png)
 
-Once downloaded, place the dataset in the data/ folder.
+Once downloaded, you can place the dataset in the data/ folder.
 
 ## Step 3: Install Python Dependencies
 To install the required Python packages, preferrably in a virtual environment, run:
@@ -48,22 +48,20 @@ pip install -r requirements.python
 ```
 
 ## Step 4: Pre-process Review Data
-Change the input file path to the file that you pre-processed. Finally, run the script that processes user reviews and generates appropriate responses using the Ollama model:
+Run the data_preprocessing.py script to processes user reviews data:
 
 ```bash
-python data_preprocess.py
+python .\data_preprocess.py --input_data .\data\reviews_reviews_dev.com.example_202410.csv --output_data .\data\october_reviews_record.csv
 ```
 
 ## Step 5: Generate Developer Replies
-
-Change the input file path to the file that you pre-processed.
-Finally, run the script that processes user reviews and generates appropriate responses using the Ollama model:
+Finally, run the dev_reply.py script to generates appropriate responses using the Ollama model:
 
 ```bash
-python dev_reply.py
+python .\dev_reply.py --data .\data\october_reviews_record.csv
 ```
 
-This script will automatically analyze the reviews and output suggested responses in a suitable format.
+The script will iterate through all reviews and output suggested reply in the console terminal.
 
 ![Output](/doc/doc_img_2.png)
 
