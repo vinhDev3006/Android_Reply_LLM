@@ -44,6 +44,7 @@ prompt = PromptTemplate(
     template="What is the best response to this user’s review and rating of my mobile app, considering the following details: {review} and {rating}? Ensure the response is cheerful yet professional, using the same language as the user's review, and include emojis if necessary.",
 )
 
+chain = prompt | llm
 
 # WEB APP
 streamlit.title("WHAT TO REPLY?")
@@ -51,5 +52,5 @@ review = streamlit.text_input("Input user's review:")
 rating = streamlit.number_input("Input user's rating", max_value=5, min_value=1)
 
 if review and rating:
-    response = llm.invoke(prompt.format(review=review, rating=rating))
+    response = chain.invoke({"rating": rating, "review": review})
     streamlit.write(response.content)
