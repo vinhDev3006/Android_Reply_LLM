@@ -1,2 +1,3 @@
 .venv/
+.env
 reviews_reviews_*.csv

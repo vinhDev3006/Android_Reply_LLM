@@ -73,6 +73,8 @@ The current project only outputs developer replies as plain text in the terminal
 Feel free to contribute to this project by opening pull requests or submitting issues. We welcome feedback and suggestions to improve the performance and functionality of this tool.
 
 # Extra
+
+## Docker
 This project includes a Dockerfile and a docker-compose.yml to facilitate easy setup and deployment. It is recommended to use Docker Desktop.
 
 ```docker
@@ -83,3 +85,14 @@ docker compose up
 ```
 
 For more details on the Docker configuration, please refer to the docker-compose.yml file in this repository.
+
+
+## Web App
+This project contains a simple web app, utilizing the streamlit library, and Google Gemini LLM model. In order to use this website, you will need a Google Gemini API and you can put it in the .env file with the name GOOGLE_API_KEY
+
+To run the web app, execute:
+```bash
+streamlit run .\web_app\web_app.py
+```
+
+![Web App](/doc/doc_img_3.png)
