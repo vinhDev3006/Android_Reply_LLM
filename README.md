@@ -17,6 +17,7 @@ cd Android_Reply_LLM
 
 ## Prerequisite
 Ensure the following before proceeding:
+- CUDA is available.
 - You have a Google Play Developer account and an app with a significant number of reviews.
 - Docker / Docker Desktop is installed on your machine.
 - Python is installed.
