@@ -48,8 +48,13 @@ chain = prompt | llm
 
 # WEB APP
 streamlit.title("WHAT TO REPLY?")
-review = streamlit.text_input("Input user's review:")
-rating = streamlit.number_input("Input user's rating", max_value=5, min_value=1)
+
+with streamlit.form(key="info_form"):
+    review = streamlit.text_input("Input user's review:")
+    rating = streamlit.number_input("Input user's rating", max_value=5, min_value=1)
+
+    streamlit.form_submit_button()
+
 
 if review and rating:
     response = chain.invoke({"rating": rating, "review": review})
